@@ -1,9 +1,10 @@
-﻿using Tournament.Core.Repositories;
+﻿using Microsoft.Extensions.Configuration;
+using Tournament.Core.Contracts;
 using Tournament.Data.Data;
 
 namespace Tournament.Data.Repositories;
 
-public class UnitOfWork(TournamentContext context) : IUnitOfWork
+public class UnitOfWork(TournamentContext context, IMetaData meta, IConfiguration config) : IUnitOfWork
 {
     private ITournamentRepository? _TournamentRepository;
     private IGameRepository? _GameRepository;
@@ -11,7 +12,7 @@ public class UnitOfWork(TournamentContext context) : IUnitOfWork
     {
         get
         {
-            _TournamentRepository ??= new TournamentRepository(context);
+            _TournamentRepository ??= new TournamentRepository(context, meta, config);
             return _TournamentRepository;
         }
     }
@@ -20,7 +21,7 @@ public class UnitOfWork(TournamentContext context) : IUnitOfWork
     {
         get
         {
-            _GameRepository ??= new GameRepository(context);
+            _GameRepository ??= new GameRepository(context, meta, config);
             return _GameRepository;
         }
     }

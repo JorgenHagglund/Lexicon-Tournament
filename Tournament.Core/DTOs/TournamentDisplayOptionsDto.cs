@@ -8,6 +8,4 @@ public record TournamentDisplayOptionsDto
     public string? Sort { get; init; }
     public bool Reverse { get; init; } = false;
     public string? Filter { get; init; }
-    public int? Page { get; init; }
-    public int? PageSize { get; init; }
 }

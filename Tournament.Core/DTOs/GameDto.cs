@@ -6,4 +6,5 @@ public record GameDto
     public required string Title { get; init; }
     public DateTime StartTime { get; init; }
     public DateTime EndTime { get; init; }
+    public int TournamentId { get; init; }
 }

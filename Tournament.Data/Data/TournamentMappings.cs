@@ -11,9 +11,10 @@ public class TournamentMappings : Profile
         CreateMap<Core.Entities.Tournament, TournamentDto>().ReverseMap();
         CreateMap<Core.Entities.Tournament, TournamentUpdateDto>().ReverseMap();
         CreateMap<Game, GameDto>().ReverseMap();
-            //.ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.Time))
-            //.ReverseMap();
+        //.ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.Time))
+        //.ReverseMap();
 
+        CreateMap<GameToCreateDto, Game>();
         CreateMap<Game, GameUpdateDto>().ReverseMap();
     }
 }

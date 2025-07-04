@@ -1,4 +1,4 @@
-﻿namespace Tournament.Core.Repositories;
+﻿namespace Tournament.Core.Contracts;
 
 public interface IUnitOfWork
 {

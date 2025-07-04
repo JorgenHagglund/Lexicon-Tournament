@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using Tournament.Core.Repositories;
+using Tournament.Core.Contracts;
 using Tournament.Data.Data;
 
 namespace Tournament.Data.Repositories;

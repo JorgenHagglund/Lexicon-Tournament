@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Tournament.Core.Repositories;
+namespace Tournament.Core.Contracts;
 
 public interface IRepositoryBase<T>
 {
